@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissor</title>
+  <link rel="stylesheet" href="/final rock-paper-scissor/sytles.css">
+
+</head>
+<body>
+  <p class="title" >Rock Paper Scissor</p>
+  <button  onclick="playGame('rock')">
+    <img src="/final rock-paper-scissor/images/images/rock.jpeg ">
+      </button>
+  <button  class="rock" onclick="playGame('paper')"><img src="/final rock-paper-scissor/images/images/paper.jpeg"></button>
+  <button  class="sciscor" onclick="playGame('scissor')"><img src="/final rock-paper-scissor/images/images/sciscor.jpeg"
+    ></button>
+  <p class="result"></p>
+  <p class="moves"></p>
+  <p class="js-score"></p>
+  <button class="ResetScore"  onclick="
+      score.wins=0
+      score.loses=0
+      score.ties =0
+  function updateScore(){
+        document.querySelector('.js-score')
+        .innerHTML=`wins:${score.wins},  loses:${score.loses},  ties:${score.ties } `;  
+      }
+      updateScore();
+        document.querySelector('js-score').innerHTML='play again'
+  ">ResetScore</button>
+
+  <script src="/final rock-paper-scissor/RPS.js"></script>
+  </script>
+
+</body>
+</html>
